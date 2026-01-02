@@ -32,10 +32,13 @@ uvicorn app.main:app --reload
 
 Swagger UI: http://127.0.0.1:8000/docs
 
-## API
-POST /predict
-Upload an audio file (.wav, .mp3, .flac, .ogg)
+## 📡 API
 
+### POST `/predict`
+Upload an audio file (`.wav`, `.mp3`, `.flac`, `.ogg`)
+
+#### Example Response
+```json
 {
   "genre": "jazz",
   "confidence": 0.56,
@@ -45,5 +48,6 @@ Upload an audio file (.wav, .mp3, .flac, .ogg)
     { "genre": "rock", "prob": 0.06 }
   ]
 }
+```
 ## Tech
 Python · TensorFlow/Keras · Librosa · FastAPI · Uvicorn
