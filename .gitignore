@@ -1,2 +1,15 @@
-data_10.json 
-Data/ 
+# virtual env
+.venv/
+
+# python cache
+__pycache__/
+*.pyc
+
+# data
+data_10.json
+Data/
+
+# audio
+*.mp3
+*.wav
+*.flac

@@ -18,6 +18,9 @@ def load_data(data_path):
     with open(data_path, "r") as fp:
         data = json.load(fp)
 
+    with open("models/mapping.json", "w") as fp:
+        json.dump(data["mapping"], fp)
+
     X = np.array(data["mfcc"])
     y = np.array(data["labels"])
     return X, y
@@ -168,3 +171,5 @@ if __name__ == "__main__":
 
     # predict sample
     predict(model, X_to_predict, y_to_predict)
+
+    model.save("models/cnn_genre.keras")
